@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+
+set ip [lrange $argv 0 0]
+set timeout 30
+spawn ssh peng.gao@1.1.1.1
+expect "*password*"
+send "peng.gao\r"
+interact
