@@ -2,8 +2,7 @@ set fileencodings=utf-8,gb18030,utf-16,big5
 autocmd FileType php setlocal keywordprg=pman
 autocmd FileType php noremap <C-R> :w!<CR>:!/usr/bin/php %<CR>
 autocmd FileType python noremap <C-R> :w!<CR>:!/usr/bin/python %<CR>
-autocmd FileType scala noremap <C-R> :w!<CR>:!/opt/app/scala/bin/scala %<CR>
-autocmd FileType go noremap <C-R> :w!<CR>:!/opt/local/go/bin/go run %<CR>
+autocmd FileType go noremap <C-R> :w!<CR>:!/usr/local/go/bin/go run %<CR>
 autocmd FileType rst noremap <C-R> :w!<CR>:!/usr/local/bin/rst2html.py % out.html<CR>
 autocmd FileType json noremap <C-R> :w!<CR>:!/Users/gaopeng/scripts/json %<CR>
 nnoremap <silent> _ :nohl<CR>
@@ -25,7 +24,7 @@ augroup filetype
     au! BufRead,BufNewFile *.proto setfiletype proto
 augroup end
 
-set rtp+=/opt/local/go/misc/vim
+set rtp+=/usr/local/go/misc/vim
 filetype plugin indent on
 
 imap <C-j> <C-x><C-o>
